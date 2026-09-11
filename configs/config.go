@@ -56,7 +56,7 @@ func GetDefaultConfig() *Config {
 	cfg.DB.Host = "localhost"
 	cfg.DB.Port = "5432"
 	cfg.DB.User = "postgres"
-	cfg.DB.Password = "postgres"
+	cfg.DB.Password = "Nanncie_03."
 	cfg.DB.Name = "school_db"
 	cfg.DB.SSLMode = "disable"
 	return cfg
