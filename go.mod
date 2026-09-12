@@ -9,6 +9,7 @@ require (
 	github.com/go-playground/locales v0.14.1 // indirect
 	github.com/go-playground/universal-translator v0.18.1 // indirect
 	github.com/golang-jwt/jwt/v5 v5.3.1 // indirect
+	github.com/labstack/echo-jwt/v4 v4.4.0 // indirect
 	github.com/leodido/go-urn v1.5.0 // indirect
 	github.com/ngrok/ngrok-api-go/v4 v4.0.1 // indirect
 	golang.org/x/time v0.15.0 // indirect
