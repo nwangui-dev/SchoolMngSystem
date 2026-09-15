@@ -12,7 +12,7 @@ type Student struct {
 	LastName  string `gorm:"type:varchar(100);not null" json:"last_name" validate:"required"`
 	Email string `gorm:"type:varchar(100);not null;unique" json:"email" validate:"required,email"`
 	Grade string `gorm:"type:varchar(10);not null" json:"grade" validate:"required"`
-	CreatedAt time.Time `json:"create_at"`
+	CreatedAt time.Time `json:"created_at"`
 	UpdatedAt time.Time `json:"updated_at"`
 	DeletedAt gorm.DeletedAt `gorm:"index" json:"-"`
 

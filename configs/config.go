@@ -9,7 +9,8 @@ import (
 
 type Config struct {
 	App struct {
-		Port string `yaml:"port"`
+		Port      string `yaml:"port"`
+		JWTSecret string `yaml:"jwt_secret"`
 	} `yaml:"app"`
 	DB struct {
 		Host     string `yaml:"host"`
@@ -25,11 +26,15 @@ var AppConfig *Config
 
 func LoadConfig() *Config {
 	cfg := &Config{}
-	
+
 	// Default fallbacks
 	cfg.App.Port = os.Getenv("APP_PORT")
+	cfg.App.JWTSecret = os.Getenv("APP_JWT_SECRET")
 	if cfg.App.Port == "" {
 		cfg.App.Port = "8080"
+	}
+	if cfg.App.JWTSecret == "" {
+		cfg.App.JWTSecret = "your_jwt_secret_here"
 	}
 
 	cfg.DB.Host = getEnv("DB_HOST", "localhost")
